@@ -122,11 +122,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Visual studio\\projects\\_153501_Savonchik\\_153501_Savonchik.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\Desktop\\labs\\labs_C#_2sem\\lab_1\\_153501_Savonchik\\_153501_Savonchik.csproj",
       "projectName": "_153501_Savonchik",
-      "projectPath": "C:\\Visual studio\\projects\\_153501_Savonchik\\_153501_Savonchik.csproj",
+      "projectPath": "C:\\Users\\HP\\Desktop\\labs\\labs_C#_2sem\\lab_1\\_153501_Savonchik\\_153501_Savonchik.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Visual studio\\projects\\_153501_Savonchik\\obj\\",
+      "outputPath": "C:\\Users\\HP\\Desktop\\labs\\labs_C#_2sem\\lab_1\\_153501_Savonchik\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
