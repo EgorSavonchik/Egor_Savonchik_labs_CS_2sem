@@ -1,10 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DataServise;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataServise.Tests
 {
@@ -39,25 +34,77 @@ namespace DataServise.Tests
         [TestMethod()]
         public void GetDaysSpanTest()
         {
-            Assert.AreEqual(DataServise.GetDaysSpan(30, 03, 2022), 1);
+            DateTime time = new DateTime(2022, 03, 30);
+
+            int exp;
+
+            if (time.Subtract(DateTime.Now).Minutes > 0 && time.Subtract(DateTime.Now).Days == 0)
+            {
+                exp = 1;
+            }
+            else
+            {
+                exp = Math.Abs(time.Subtract(DateTime.Now).Days);
+            }
+
+            Assert.AreEqual(DataServise.GetDaysSpan(30, 03, 2022), exp);
         }
 
         [TestMethod()]
         public void GetDaysSpanTest1()
         {
-            Assert.AreEqual(DataServise.GetDaysSpan(31, 03, 2022), 0);
+            DateTime time = new DateTime(2022, 04, 01);
+
+            int exp;
+
+            if (time.Subtract(DateTime.Now).Minutes > 0 && time.Subtract(DateTime.Now).Days == 0)
+            {
+                exp = 1;
+            }
+            else
+            {
+                exp = Math.Abs(time.Subtract(DateTime.Now).Days);
+            }
+
+            Assert.AreEqual(DataServise.GetDaysSpan(01, 04, 2022), exp);
         }
 
         [TestMethod()]
         public void GetDaysSpanTest2()
         {
-            Assert.AreEqual(DataServise.GetDaysSpan(29, 03, 2022), 2);
+            DateTime time = new DateTime(2022, 03, 31);
+
+            int exp;
+
+            if (time.Subtract(DateTime.Now).Minutes > 0 && time.Subtract(DateTime.Now).Days == 0)
+            {
+                exp = 1;
+            }
+            else
+            {
+                exp = Math.Abs(time.Subtract(DateTime.Now).Days);
+            }
+
+            Assert.AreEqual(DataServise.GetDaysSpan(31, 03, 2022), exp);
         }
 
         [TestMethod()]
         public void GetDaysSpanTest3()
         {
-            Assert.AreEqual(DataServise.GetDaysSpan(1, 1, 1), 738244);
+            DateTime time = new DateTime(0001, 01, 01);
+
+            int exp;
+
+            if (time.Subtract(DateTime.Now).Minutes > 0 && time.Subtract(DateTime.Now).Days == 0)
+            {
+                exp = 1;
+            }
+            else
+            {
+                exp = Math.Abs(time.Subtract(DateTime.Now).Days);
+            }
+
+            Assert.AreEqual(DataServise.GetDaysSpan(01, 01, 0001), exp);
         }
 
     }
